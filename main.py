@@ -26,9 +26,9 @@ for i in activity_lists:
             print("A", j.num, ", Value = ", j.value, ", Cost = ", j.cost, ", Skip = ", j.skip, sep="")
         print("]")
         print("Budget =", budget)
-    print("Dynamic Result:")
-    print("Maximum value:", dynamic_value, "\nSelected activities:", dynamic_list, "\nTotal cost:", dynamic_cost)
-    print("Brute Result:")
-    print("Maximum value:", brute_value, "\nSelected activities:", brute_list, "\nTotal cost:", brute_cost, "\n")
+        print("Dynamic Result:")
+        print("Maximum value:", dynamic_value, "\nSelected activities:", dynamic_list, "\nTotal cost:", dynamic_cost)
+        print("Brute Result:")
+        print("Maximum value:", brute_value, "\nSelected activities:", brute_list, "\nTotal cost:", brute_cost, "\n")
 
 print("Random validation tests passed: ", num_correct, " / ", activities_to_generate, sep="")
