@@ -10,6 +10,7 @@ def brute(activity_list, budget):
 
     max_value = 0
     best_set = []
+    best_cost = 0
     for combo in sets:
         total_cost = 0
         skip_violation = False
@@ -24,11 +25,13 @@ def brute(activity_list, budget):
             current_value = 0
             for activity in combo:
                 current_value += activity.value
-            if current_value > max_value:
+            if current_value > max_value or (current_value >= max_value and total_cost < best_cost):
                 max_value = current_value
                 best_set = combo
+                best_cost = total_cost
     printable_set = []
     for i in best_set:
         printable_set.append(i.num)
-    return printable_set, max_value
+    set_and_cost = printable_set, best_cost
+    return set_and_cost, max_value
 
